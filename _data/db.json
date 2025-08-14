@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "Project 1",
+      "image": "project1.jpg",
+      "labels": "label1"
+    },
+    {
+      "id": "2",
+      "title": "Project 2",
+      "image": "project2.jpg",
+      "labels": "label2"
+    },
+    {
+      "id": "3",
+      "title": "Project 3",
+      "image": "project3.jpg",
+      "labels": "label1"
+    }
+  ],
+  "nav_menu": [
+    {
+      "name": "About Me",
+      "href": "#"
+    }
+  ],
+  "socialMedia": [
+    { "image": "linkedin.svg", "alt": "Linkedin Logo" },
+    { "image": "figma.svg", "alt": "Figma Logo" },
+    { "image": "github.svg", "alt": "Github Logo" },
+    { "image": "notion.svg", "alt": "Notion Logo" }
+  ]
+}
