@@ -12,7 +12,7 @@ const Navbar = () => {
   }
 
   return (
-    <header className="px-4 md:px-8 xl:px-20">
+    <header>
       <nav className="my-8 flex items-center bg-foreground rounded-full justify-between px-6 py-2 md:px-14 md:py-[14px] lg:px-15 lg:py-[17.5px] xl:px-16 xl:py-7">
         <a href="/">
           <Image

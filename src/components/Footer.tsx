@@ -6,48 +6,53 @@ import Image from "next/image"
 
 import { CopyrightIcon } from "@/icons"
 import { fetchData } from "@/scripts/useFetchData"
-import { SocialMediaProps } from "@/types"
+import { FooterSocialMediaProps } from "@/types"
+
+import Button from "./Button"
 
 const Footer = () => {
-  const [icons, setIcons] = useState<SocialMediaProps[]>([])
+  const [icons, setIcons] = useState<FooterSocialMediaProps[]>([])
   useEffect(() => {
     const fetchOptions = async () => {
-      const newIcon = await fetchData<SocialMediaProps[]>("socialMedia")
+      const newIcon =
+        await fetchData<FooterSocialMediaProps[]>("footerSocialMedia")
       setIcons(newIcon)
     }
     fetchOptions()
   }, [])
   return (
-    <footer className="mx-auto mt-72 max-w-[1440px] p-10 text-foreground">
-      <div className="flex flex-wrap items-start justify-between gap-20 max-lg:flex-col">
-        <div className="flex flex-col items-start"></div>
-      </div>
-
-      <div className="mt-24 flex justify-between max-sm:flex-col max-sm:items-center">
-        <div className="flex flex-1 cursor-pointer items-center justify-start gap-2">
+    <footer>
+      <div className="flex justify-between">
+        <div className="flex items-center justify-start gap-2">
+          <p className="text-xs md:text-sm lg:text-base xl:text-lg">
+            Copyright
+          </p>
           <Image
             src={CopyrightIcon}
             alt="copyright sign"
-            className="-my-3 h-4 w-auto rounded-full"
+            className="h-4 w-auto"
             width={10}
             height={10}
           />
-          <p>Copyright. All rights reserved.</p>
+          <p className="text-xs md:text-sm lg:text-base xl:text-lg">
+            2025 Mariah Sunil Alexiose
+          </p>
         </div>
-        <div className="mt-8 flex items-center gap-5">
+        <div className="flex gap-2 md:gap-5 xl:gap-[18px]">
           {icons.map((icon) => (
-            <div
-              className="flex h-12 w-12 cursor-pointer items-center justify-center hover:-translate-y-1 hover:transition"
+            <Button
               key={icon.alt}
+              onClick={() => (window.location.href = icon.link)}
+              className="bg-foreground rounded-full!"
             >
               <Image
                 src={`/assets/icons/${icon.image}`}
                 alt={icon.alt}
-                width={10}
-                height={10}
-                className="h-8 w-auto"
+                width={12}
+                height={12}
+                className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6"
               />
-            </div>
+            </Button>
           ))}
         </div>
       </div>

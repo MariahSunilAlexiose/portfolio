@@ -12,7 +12,7 @@
   }
 
   body {
-    @apply relative bg-background text-foreground font-sf_text;
+    @apply relative bg-background text-foreground font-sf_text px-4 py-4 md:px-8 md:py-8 lg:px-12 xl:px-20;
   }
 }
 

@@ -38,6 +38,10 @@ import TailwindCSSIcon from "./tailwindcss.svg"
 import TomcatIcon from "./tomcat.svg"
 import VSIcon from "./vs.svg"
 import VSCodeIcon from "./vscode.svg"
+import FigmaWhiteIcon from "./figma-white.svg"
+import GithubWhiteIcon from "./github-white.svg"
+import LinkedinWhiteIcon from "./linkedin-white.svg"
+import NotionWhiteIcon from "./notion-white.svg"
 
 
-export { CopyrightIcon, ActiveDotIcon, ArrowUpRightBlackIcon, ArrowUpRightWhiteIcon, BootstrapIcon, EnvelopeIcon, EslintIcon, ExpressIcon, FigmaIcon, FirebaseIcon, FlaskBlackIcon, FlaskWhiteIcon, GithubIcon, HuskyBlackIcon, HuskyWhiteIcon, JiraIcon, LintstagedIcon, LogoBlackIcon, LogoWhiteIcon, MaterialUIIcon, MongoDBIcon, MoonBlackIcon, MoonWhiteIcon, MySQLIcon, NextJSBlackIcon, NextJSWhiteIcon, NodeJSIcon, NotionIcon, NPMIcon, PhotoshopIcon, PostgreSQLIcon, PrettierIcon, ReactJSIcon, ReduxIcon, SunBlackIcon, SunWhiteIcon, TailwindCSSIcon, TomcatIcon, VSIcon, VSCodeIcon }
+export { FigmaWhiteIcon, GithubWhiteIcon, LinkedinWhiteIcon, NotionWhiteIcon, CopyrightIcon, ActiveDotIcon, ArrowUpRightBlackIcon, ArrowUpRightWhiteIcon, BootstrapIcon, EnvelopeIcon, EslintIcon, ExpressIcon, FigmaIcon, FirebaseIcon, FlaskBlackIcon, FlaskWhiteIcon, GithubIcon, HuskyBlackIcon, HuskyWhiteIcon, JiraIcon, LintstagedIcon, LogoBlackIcon, LogoWhiteIcon, MaterialUIIcon, MongoDBIcon, MoonBlackIcon, MoonWhiteIcon, MySQLIcon, NextJSBlackIcon, NextJSWhiteIcon, NodeJSIcon, NotionIcon, NPMIcon, PhotoshopIcon, PostgreSQLIcon, PrettierIcon, ReactJSIcon, ReduxIcon, SunBlackIcon, SunWhiteIcon, TailwindCSSIcon, TomcatIcon, VSIcon, VSCodeIcon }

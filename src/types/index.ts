@@ -18,9 +18,10 @@ export type ButtonProps = {
 }
 /* eslint-enable */
 
-export type SocialMediaProps = {
+export type FooterSocialMediaProps = {
   image: string
   alt: string
+  link: string
 }
 
 export type IconType = {
