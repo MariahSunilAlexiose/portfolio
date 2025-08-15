@@ -19,12 +19,6 @@
       "labels": "label1"
     }
   ],
-  "nav_menu": [
-    {
-      "name": "About Me",
-      "href": "#"
-    }
-  ],
   "socialMedia": [
     { "image": "linkedin.svg", "alt": "Linkedin Logo" },
     { "image": "figma.svg", "alt": "Figma Logo" },

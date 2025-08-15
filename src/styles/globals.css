@@ -12,16 +12,13 @@
   }
 
   body {
-    @apply relative bg-background text-foreground;
+    @apply relative bg-background text-foreground font-sf_text;
   }
 }
 
 @layer utilities {
   main {
     @apply m-6 flex flex-col;
-  }
-  nav {
-    @apply mx-auto mb-6 mt-12 max-w-6xl lg:mt-12;
   }
   h1 {
     @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
