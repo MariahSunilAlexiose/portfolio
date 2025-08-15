@@ -10,7 +10,7 @@ export type ButtonProps = {
     | "primary"
     | "link"
     | "success"
-  size?: "default" | "sm" | "lg" | "icon"
+  size?: "default" | "xs" | "sm" | "lg" | "icon"
   children: React.ReactNode
   type?: "submit" | "reset" | "button"
   className?: string
