@@ -4,13 +4,16 @@ import { useEffect, useState } from "react"
 
 import Image from "next/image"
 
+import { dark } from "@/context"
 import { CopyrightIcon } from "@/icons"
+import { useTheme } from "@/providers"
 import { fetchData } from "@/scripts/useFetchData"
 import { FooterSocialMediaProps } from "@/types"
 
 import Button from "./Button"
 
 const Footer = () => {
+  const { theme } = useTheme()
   const [icons, setIcons] = useState<FooterSocialMediaProps[]>([])
   useEffect(() => {
     const fetchOptions = async () => {
@@ -43,14 +46,18 @@ const Footer = () => {
             <Button
               key={icon.alt}
               onClick={() => (window.location.href = icon.link)}
-              className="bg-foreground rounded-full!"
+              className="rounded-full!"
             >
               <Image
-                src={`/assets/icons/${icon.image}`}
+                src={
+                  theme === dark
+                    ? `/assets/icons/${icon.imageBlack}`
+                    : `/assets/icons/${icon.imageWhite}`
+                }
                 alt={icon.alt}
                 width={12}
                 height={12}
-                className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6"
+                className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6"
               />
             </Button>
           ))}

@@ -21,20 +21,28 @@
   ],
   "footerSocialMedia": [
     {
-      "image": "linkedin-white.svg",
+      "imageWhite": "linkedin-white.svg",
+      "imageBlack": "linkedin-black.svg",
       "alt": "Linkedin Logo",
       "link": "https://www.linkedin.com/in/mariah-sunil-alexiose-841464336/"
     },
     {
-      "image": "figma-white.svg",
+      "imageWhite": "figma-white.svg",
+      "imageBlack": "figma-black.svg",
       "alt": "Figma Logo",
       "link": "https://www.figma.com/@mariah24"
     },
     {
-      "image": "github-white.svg",
+      "imageWhite": "github-white.svg",
+      "imageBlack": "github-black.svg",
       "alt": "Github Logo",
       "link": "https://github.com/MariahSunilAlexiose"
     },
-    { "image": "notion-white.svg", "alt": "Notion Logo", "link": "" }
+    {
+      "imageWhite": "notion-white.svg",
+      "imageBlack": "notion-black.svg",
+      "alt": "Notion Logo",
+      "link": ""
+    }
   ]
 }

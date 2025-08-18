@@ -10,6 +10,7 @@ export type ButtonProps = {
     | "primary"
     | "link"
     | "success"
+    | "ghost"
   size?: "default" | "xs" | "sm" | "lg" | "icon"
   children: React.ReactNode
   type?: "submit" | "reset" | "button"
@@ -19,7 +20,8 @@ export type ButtonProps = {
 /* eslint-enable */
 
 export type FooterSocialMediaProps = {
-  image: string
+  imageWhite: string
+  imageBlack: string
   alt: string
   link: string
 }

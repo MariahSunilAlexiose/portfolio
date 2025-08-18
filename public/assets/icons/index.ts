@@ -43,5 +43,9 @@ import GithubWhiteIcon from "./github-white.svg"
 import LinkedinWhiteIcon from "./linkedin-white.svg"
 import NotionWhiteIcon from "./notion-white.svg"
 import DotIcon from "./dot.svg"
+import FigmaBlackIcon from "./figma-black.svg"
+import GithubBlackIcon from "./github-black.svg"
+import LinkedinBlackIcon from "./linkedin-black.svg"
+import NotionBlackIcon from "./notion-black.svg"
 
-export { DotIcon, FigmaWhiteIcon, GithubWhiteIcon, LinkedinWhiteIcon, NotionWhiteIcon, CopyrightIcon, ActiveDotIcon, ArrowUpRightBlackIcon, ArrowUpRightWhiteIcon, BootstrapIcon, EnvelopeIcon, EslintIcon, ExpressIcon, FigmaIcon, FirebaseIcon, FlaskBlackIcon, FlaskWhiteIcon, GithubIcon, HuskyBlackIcon, HuskyWhiteIcon, JiraIcon, LintstagedIcon, LogoBlackIcon, LogoWhiteIcon, MaterialUIIcon, MongoDBIcon, MoonBlackIcon, MoonWhiteIcon, MySQLIcon, NextJSBlackIcon, NextJSWhiteIcon, NodeJSIcon, NotionIcon, NPMIcon, PhotoshopIcon, PostgreSQLIcon, PrettierIcon, ReactJSIcon, ReduxIcon, SunBlackIcon, SunWhiteIcon, TailwindCSSIcon, TomcatIcon, VSIcon, VSCodeIcon }
+export { FigmaBlackIcon, GithubBlackIcon, LinkedinBlackIcon, NotionBlackIcon, DotIcon, FigmaWhiteIcon, GithubWhiteIcon, LinkedinWhiteIcon, NotionWhiteIcon, CopyrightIcon, ActiveDotIcon, ArrowUpRightBlackIcon, ArrowUpRightWhiteIcon, BootstrapIcon, EnvelopeIcon, EslintIcon, ExpressIcon, FigmaIcon, FirebaseIcon, FlaskBlackIcon, FlaskWhiteIcon, GithubIcon, HuskyBlackIcon, HuskyWhiteIcon, JiraIcon, LintstagedIcon, LogoBlackIcon, LogoWhiteIcon, MaterialUIIcon, MongoDBIcon, MoonBlackIcon, MoonWhiteIcon, MySQLIcon, NextJSBlackIcon, NextJSWhiteIcon, NodeJSIcon, NotionIcon, NPMIcon, PhotoshopIcon, PostgreSQLIcon, PrettierIcon, ReactJSIcon, ReduxIcon, SunBlackIcon, SunWhiteIcon, TailwindCSSIcon, TomcatIcon, VSIcon, VSCodeIcon }
