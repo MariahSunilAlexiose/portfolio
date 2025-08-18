@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 
 import { dark, light } from "@/context"
 import { useTheme } from "@/providers"
@@ -13,8 +14,8 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className="my-8 flex items-center bg-foreground rounded-full justify-between px-6 py-2 md:px-14 md:py-[14px] lg:px-15 lg:py-[17.5px] xl:px-16 xl:py-7">
-        <a href="/">
+      <nav className="my-8 flex items-center justify-between rounded-full bg-foreground px-6 py-2 md:px-14 md:py-[14px] lg:px-15 lg:py-[17.5px] xl:px-16 xl:py-7">
+        <Link href="/">
           <Image
             src={
               theme === dark
@@ -24,14 +25,14 @@ const Navbar = () => {
             alt="My Portfolio Logo"
             width={62}
             height={12}
-            className="w-16 h-3 md:w-[77px] md:h-5 lg:w-28 lg:h-6 xl:w-[152px] xl:h-8"
+            className="h-3 w-16 md:h-5 md:w-[77px] lg:h-6 lg:w-28 xl:h-8 xl:w-[152px]"
           />
-        </a>
+        </Link>
 
-        <div className="flex gap-7 items-center">
+        <div className="flex items-center gap-7">
           <a
             href="/about-me"
-            className="text-xs md:text-sm lg:text-base xl:text-xl font-bold text-background font-sf_display"
+            className="font-sf-display text-xs font-bold text-background md:text-sm lg:text-base xl:text-xl"
           >
             About Me
           </a>

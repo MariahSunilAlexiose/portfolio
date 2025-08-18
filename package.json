@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"node src/scripts/killPort.js && yarn json-server --watch ./_data/db.json --port 4000\" \"next dev\"",
+    "dev": "concurrently \"node src/scripts/killPort.js && yarn json-server --watch ./_data/db.json --port 4000\" \"next dev --turbopack\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --dir src && eslint . --ext ts --ext tsx --ext js --config .eslintrc.json",
+    "lint": "next lint --dir src && eslint . --ext ts --ext tsx --ext js --config eslint.config.mjs",
     "prepare": "husky",
     "lint-staged": "lint-staged",
     "check-types": "tsc --pretty --noEmit",
     "check-prettier": "prettier --check --ignore-path .prettierignore .",
-    "prettier": "prettier --write --ignore-path .prettierignore .",
+    "prettier": "prettier --config .prettierrc.json --write --ignore-path .prettierignore .",
     "format": "eslint . --ext ts --ext tsx --ext js && next lint && prettier --write --ignore-path .prettierignore . && tsc --pretty --noEmit"
   },
   "lint-staged": {
@@ -21,31 +21,36 @@
     ]
   },
   "dependencies": {
-    "next": "^14.2.4",
-    "react": "^18",
-    "react-dom": "^18"
+    "next": "15.4.6",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
   },
   "devDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "concurrently": "^8.2.2",
-    "eslint": "8.57.0",
-    "eslint-config-next": "14.2.4",
-    "eslint-config-prettier": "^9.1.0",
-    "husky": "^9.0.11",
-    "json-server": "^1.0.0-beta.1",
-    "lint-staged": "^15.2.7",
-    "postcss": "^8",
-    "prettier": "^3.3.2",
-    "prettier-plugin-tailwindcss": "^0.6.5",
-    "tailwindcss": "^3.4.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.6.2",
+    "@tailwindcss/postcss": "^4.1.12",
+    "@types/node": "^24.3.0",
+    "@types/react": "19.1.10",
+    "@types/react-dom": "19.1.7",
+    "concurrently": "^9.2.0",
+    "eslint": "9.33.0",
+    "eslint-config-next": "15.4.6",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "json-server": "^1.0.0-beta.3",
+    "lint-staged": "^16.1.5",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^4.1.12",
     "typescript": "^5"
   },
   "prettier": {
     "plugins": [
       "prettier-plugin-tailwindcss"
     ]
+  },
+  "resolutions": {
+    "@types/react": "19.1.10",
+    "@types/react-dom": "19.1.7"
   }
 }

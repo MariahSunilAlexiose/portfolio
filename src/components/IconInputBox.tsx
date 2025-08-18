@@ -28,24 +28,24 @@ const InputBox = () => {
   console.log(size)
 
   return (
-    <div className="flex justify-between items-center border border-muted-foreground rounded-full px-4 py-1 md:py-2 lg:py-4 xl:py-3">
-      <div className="flex gap-2 items-center md:gap-3">
+    <div className="border-muted-foreground flex items-center justify-between rounded-full border px-4 py-1 md:py-2 lg:py-4 xl:py-3">
+      <div className="flex items-center gap-2 md:gap-3">
         <Button
           // size="icon"
-          className="items-center flex p-2 bg-accent !rounded-full"
+          className="bg-accent flex items-center !rounded-full p-2"
         >
           <Image
             src={EnvelopeIcon}
             alt="Envelope Icon"
             width={5}
             height={10}
-            className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7"
+            className="h-5 w-5 lg:h-6 lg:w-6 xl:h-7 xl:w-7"
           />
         </Button>
         <input
           type="email"
           placeholder="Enter Email Address"
-          className="flex w-full rounded-md text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl bg-transparent px-3 focus:outline-none focus:ring-0 border-none"
+          className="md:text-md flex w-full rounded-md border-none bg-transparent px-3 text-xs focus:ring-0 focus:outline-none sm:text-sm lg:text-lg xl:text-xl"
         />
       </div>
       <Button
