@@ -2,21 +2,21 @@
   "projects": [
     {
       "id": "1",
-      "title": "Project 1",
-      "image": "project1.jpg",
-      "labels": "label1"
+      "title": "The Ultimate Starter Stack: TypeScript, React, Next.js & Tailwind CSS",
+      "image": "starter-card-original.png",
+      "labels": "Typescript"
     },
     {
       "id": "2",
-      "title": "Project 2",
-      "image": "project2.jpg",
-      "labels": "label2"
+      "title": "Building DashBite: A Full-Stack Journey into Food Delivery Tech",
+      "image": "dashbite-card-original.png",
+      "labels": "Full Stack"
     },
     {
       "id": "3",
-      "title": "Project 3",
-      "image": "project3.jpg",
-      "labels": "label1"
+      "title": "Building This Profile Website with Next.js, Tailwind CSS & Jira: A Behind-the-Scenes Look",
+      "image": "profile-card-original.png",
+      "labels": "Typescript"
     }
   ],
   "footerSocialMedia": [

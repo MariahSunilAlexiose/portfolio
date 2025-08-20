@@ -30,3 +30,12 @@ export type IconType = {
   img: StaticImport
   name: string
 }
+
+export type ProjectType = {
+  id: string
+  title: string
+  image: string
+  labels: string
+}
+
+export type BreakpointSizeType = "xs" | "sm" | "lg" | "xl"

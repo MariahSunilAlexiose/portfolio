@@ -1,30 +1,65 @@
-import Badge from "./Badge"
+import Image from "next/image"
+
+import { dark } from "@/context"
+import { ArrowUpRightBlackIcon, ArrowUpRightWhiteIcon } from "@/icons"
+import { useTheme } from "@/providers"
+import { useResponsiveSize } from "@/utils"
+
 import Button from "./Button"
 
 type Props = {
   title: string
   image: string
-  description: string
-  content: string
-  footer: boolean
+  labels: string
+  className?: string
 }
 
-const Card = ({ title, description, content, footer }: Props) => {
+const Card = ({ title, image, labels, className }: Props) => {
+  const { theme } = useTheme()
+  const size = useResponsiveSize()
   return (
-    <div className="bg-card text-card-foreground flex flex-col justify-between rounded-xl border shadow">
-      <div className="flex flex-row items-center gap-2 space-y-1.5 p-6">
-        <div>
-          <h3 className="leading-none font-semibold tracking-tight">{title}</h3>
-          <p className="text-muted-foreground text-sm">{description}</p>
+    <div
+      className={`flex flex-col rounded-4xl xl:w-[416px] lg:w-[365px] md:w-[217px] w-[198px] ${className}`}
+    >
+      <div className="relative xl:w-[416px] lg:w-[365px] md:w-[217px] w-[198px]">
+        <div className="h-[198px] xl:h-[416px] lg:h-[365px] md:h-[217px]">
+          {/* Image */}
+          <Image
+            src={`/assets/images/${image}`}
+            alt={title}
+            fill
+            className="object-cover"
+            style={{
+              clipPath: size === "xl" ? "url(#clipXL)" : "url(#clipRest)",
+            }}
+          />
         </div>
+
+        {/* Labels on Image */}
+        <div className="absolute top-4 left-4 flex flex-wrap gap-2 z-10">
+          {labels &&
+            labels.split(";").map((label: string, index: number) => (
+              <Button
+                key={index}
+                className="bg-foreground text-background text-xs px-2 py-1 shadow-md"
+              >
+                {label.trim()}
+              </Button>
+            ))}
+        </div>
+
+        {/* Arrow Button */}
+        <Button className="absolute bottom-0 right-0 px-3 lg:px-6 lg:py-9 xl:py-9 rounded-full!">
+          <Image
+            src={theme === dark ? ArrowUpRightBlackIcon : ArrowUpRightWhiteIcon}
+            alt={title}
+            className="w-2.5 h-2.5 md:w-4 md:h-4 lg:w-8 lg:h-8"
+          />
+        </Button>
       </div>
-      <div className="p-6 pt-0">
-        <p>{content}</p>
-      </div>
-      <div className="flex items-center justify-between p-6 pt-0">
-        <Button>View Recipes</Button>
-        {footer && <Badge variant="accent" title="Vegan!" />}
-      </div>
+
+      {/* Title below image */}
+      <h3 className="mt-2 text-sm font-semibold">{title}</h3>
     </div>
   )
 }

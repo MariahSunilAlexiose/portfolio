@@ -1,31 +1,14 @@
 "use client"
 
-import { useEffect, useState } from "react"
-
 import Image from "next/image"
 
 import { EnvelopeIcon } from "@/icons"
+import { useResponsiveSize } from "@/utils"
 
 import Button from "./Button"
 
-const getSize = (width: number): "xs" | "sm" | "lg" => {
-  if (width >= 1024) return "lg"
-  if (width >= 768) return "sm"
-  return "xs"
-}
-
-const InputBox = () => {
-  const [size, setSize] = useState<"xs" | "sm" | "lg">(() =>
-    getSize(window.innerWidth)
-  )
-
-  useEffect(() => {
-    const handler = () => setSize(getSize(window.innerWidth))
-    window.addEventListener("resize", handler)
-    return () => window.removeEventListener("resize", handler)
-  }, [])
-
-  console.log(size)
+const IconInputBox = () => {
+  const size = useResponsiveSize()
 
   return (
     <div className="border-muted-foreground flex items-center justify-between rounded-full border px-4 py-1 md:py-2 lg:py-4 xl:py-3">
@@ -50,7 +33,7 @@ const InputBox = () => {
       </div>
       <Button
         variant="primary"
-        size={size}
+        size={size === "xl" ? "lg" : size}
         className="!rounded-full md:text-base xl:text-xl"
       >
         Send
@@ -59,4 +42,4 @@ const InputBox = () => {
   )
 }
 
-export default InputBox
+export default IconInputBox

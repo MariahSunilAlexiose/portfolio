@@ -3,9 +3,7 @@
 import React from "react"
 
 import Image from "next/image"
-import Link from "next/link"
 
-import { ButtonVariants } from "@/constants"
 import { ActiveDotIcon, DotIcon } from "@/icons"
 import { ButtonProps } from "@/types"
 
@@ -28,36 +26,18 @@ const PaginationItem = React.forwardRef(function PaginationItem(
 type PaginationLinkProps = {
   isActive?: boolean
 } & Pick<ButtonProps, "size"> &
-  React.ComponentProps<typeof Link>
+  React.ComponentProps<"button">
 
 const PaginationLink = ({
   isActive,
-  size = "icon",
-  onClick,
-}: PaginationLinkProps & { onClick?: () => void }) => (
+  className,
+  ...props
+}: PaginationLinkProps) => (
   <button
-    className={`cursor-pointer ${ButtonVariants.size[size]}`}
+    className={`focus:outline-none ${className ?? ""}`}
     aria-current={isActive ? "page" : undefined}
-    onClick={onClick}
-  >
-    <Image
-      src={isActive ? ActiveDotIcon : DotIcon}
-      alt={isActive ? "Active page dot" : "Page dot"}
-      className="h-3 w-3"
-    />
-    <span className="sr-only">Page {isActive ? "active" : ""}</span>
-  </button>
-)
-
-const PaginationEllipsis = ({ onClick }: { onClick?: () => void }) => (
-  <button
-    aria-hidden
-    className="flex h-9 w-9 items-center justify-center opacity-50"
-    onClick={onClick}
-  >
-    <Image src={DotIcon} alt="More pages" className="h-2 w-2" />
-    <span className="sr-only">More pages</span>
-  </button>
+    {...props}
+  />
 )
 
 const Pagination = ({
@@ -66,53 +46,9 @@ const Pagination = ({
   currentPage,
   setCurrentPage,
 }: Props) => {
-  const pageNumbers = []
-  for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
-    pageNumbers.push(i)
-  }
+  const totalPages = Math.ceil(totalItems / itemsPerPage)
 
-  const maxPageNum = 5 // Maximum page numbers to display at once
-  const pageNumLimit = Math.floor(maxPageNum / 2) // Current page should be in the middle if possible
-
-  let activePages = pageNumbers.slice(
-    Math.max(0, currentPage - 1 - pageNumLimit),
-    Math.min(currentPage - 1 + pageNumLimit + 1, pageNumbers.length)
-  )
-
-  // Function to render page numbers with ellipsis
-  const renderPages = () => {
-    const renderedPages = activePages.map((page, idx) => (
-      <PaginationItem key={idx}>
-        <PaginationLink
-          href="#"
-          isActive={currentPage === page}
-          onClick={() => setCurrentPage(page)}
-        />
-      </PaginationItem>
-    ))
-
-    if (activePages[0] > 1) {
-      renderedPages.unshift(
-        <PaginationEllipsis
-          key="ellipsis-start"
-          onClick={() => setCurrentPage(activePages[0] - 1)}
-        />
-      )
-    }
-
-    if (activePages[activePages.length - 1] < pageNumbers.length) {
-      renderedPages.push(
-        <PaginationEllipsis
-          key="ellipsis-end"
-          onClick={() =>
-            setCurrentPage(activePages[activePages.length - 1] + 1)
-          }
-        />
-      )
-    }
-
-    return renderedPages
-  }
+  if (totalPages <= 1) return null // Hide pagination if there's only one page
 
   return (
     <nav
@@ -120,7 +56,30 @@ const Pagination = ({
       aria-label="pagination"
       className="mx-auto flex w-full justify-center"
     >
-      <ul className="flex flex-row items-center gap-1">{renderPages()}</ul>
+      <ul className="flex flex-row items-center justify-center gap-5">
+        {Array.from({ length: totalPages }, (_, index) => {
+          const page = index + 1
+          const isActive = page === currentPage
+
+          return (
+            <PaginationItem key={page}>
+              <PaginationLink
+                isActive={isActive}
+                aria-label={`Go to page ${page}`}
+                onClick={() => setCurrentPage(page)}
+              >
+                <Image
+                  src={isActive ? ActiveDotIcon : DotIcon}
+                  alt={isActive ? "Active page dot" : "Page dot"}
+                  className={
+                    isActive ? "w-[67px] h-[13px]" : "h-[13px] w-[13px]"
+                  }
+                />
+              </PaginationLink>
+            </PaginationItem>
+          )
+        })}
+      </ul>
     </nav>
   )
 }
