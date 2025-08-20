@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="flex justify-between">
-        <div className="flex items-center justify-start gap-2">
+        <div className="flex items-center gap-3 flex-col sm:justify-between sm:flex-row">
           <p className="text-xs md:text-sm lg:text-base xl:text-lg">
             Copyright
           </p>
