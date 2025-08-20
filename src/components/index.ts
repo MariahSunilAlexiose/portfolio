@@ -1,4 +1,3 @@
-import Badge from "./Badge"
 import Button from "./Button"
 import Card from "./Card"
 import Footer from "./Footer"
@@ -16,7 +15,6 @@ export {
   Navbar,
   Pagination,
   Card,
-  Badge,
   Button,
   Input,
   Label,
