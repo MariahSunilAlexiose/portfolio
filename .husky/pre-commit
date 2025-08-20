@@ -19,8 +19,6 @@ yarn prettier ||
     false;
 )
 
-git add -A
-
 npx lint-staged
 
 echo 'Committing...'
