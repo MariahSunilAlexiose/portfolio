@@ -26,8 +26,8 @@ export default function RootLayout({
     <ThemeProvider>
       <html lang="en">
         <body
-          className="bg-background text-foreground font-sf_text relative px-4 py-4 md:px-8 md:py-8 lg:px-12 xl:px-20 bg-cover bg-center"
-          style={{ backgroundImage: "url('/assets/images/bg-patterns-3.png')" }}
+          className="bg-background text-foreground font-sf_text flex flex-col gap-5 p-4 md:p-8 md:gap-8 lg:gap-13 lg:px-6 lg:py-8 xl:gap-21 xl:px-20 xl:py-8 bg-cover bg-center"
+          style={{ backgroundImage: "url('/assets/images/bg-patterns.png')" }}
         >
           <Navbar />
           <div className="flex min-h-screen flex-col">{children}</div>
