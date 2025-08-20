@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className="my-8 flex items-center justify-between rounded-full bg-foreground px-6 py-2 md:px-14 md:py-[14px] lg:px-15 lg:py-[17.5px] xl:px-16 xl:py-7">
+      <nav className="flex items-center justify-between rounded-full bg-foreground px-6 py-2 md:px-14 md:py-[14px] lg:px-15 lg:py-[17.5px] xl:px-16 xl:py-7">
         <Link href="/">
           <Image
             src={
