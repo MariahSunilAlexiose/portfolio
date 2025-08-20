@@ -25,7 +25,10 @@ export default function RootLayout({
   return (
     <ThemeProvider>
       <html lang="en">
-        <body className="bg-background text-foreground font-sf_text relative px-4 py-4 md:px-8 md:py-8 lg:px-12 xl:px-20">
+        <body
+          className="bg-background text-foreground font-sf_text relative px-4 py-4 md:px-8 md:py-8 lg:px-12 xl:px-20 bg-cover bg-center"
+          style={{ backgroundImage: "url('/assets/images/bg-patterns-3.png')" }}
+        >
           <Navbar />
           <div className="flex min-h-screen flex-col">{children}</div>
           <Footer />
