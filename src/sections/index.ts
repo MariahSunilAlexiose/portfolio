@@ -1,4 +1,5 @@
+import Banner from "./Banner"
 import Header from "./Header"
 import Projects from "./Projects"
 
-export { Header, Projects }
+export { Banner, Header, Projects }
