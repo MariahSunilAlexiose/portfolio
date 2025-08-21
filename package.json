@@ -15,7 +15,7 @@
     "format": "eslint . --ext ts --ext tsx --ext js && next lint && prettier --write --ignore-path .prettierignore . && tsc --pretty --noEmit"
   },
   "lint-staged": {
-    "**/*": [
+    "*.{js,ts,tsx,json,css,md}": [
       "yarn lint",
       "yarn prettier"
     ]
