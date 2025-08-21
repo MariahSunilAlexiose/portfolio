@@ -19,6 +19,10 @@ yarn prettier ||
     false;
 )
 
-npx lint-staged
+npx lint-staged || 
+(
+    echo 'Pre-commit checks failed.'
+    false
+)
 
 echo 'Committing...'
