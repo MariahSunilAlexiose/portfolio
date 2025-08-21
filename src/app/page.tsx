@@ -1,4 +1,4 @@
-import { Banner, Header, Projects } from "@/sections"
+import { Banner, Contact, Header, Projects } from "@/sections"
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <Header />
       <Projects />
       <Banner />
+      <Contact />
     </main>
   )
 }
