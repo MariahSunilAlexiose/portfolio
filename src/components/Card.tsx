@@ -19,7 +19,7 @@ const Card = ({ title, image, labels, className }: Props) => {
   const size = useResponsiveSize()
   return (
     <div
-      className={`flex flex-col rounded-4xl xl:w-[416px] lg:w-[365px] md:w-[217px] w-[198px] ${className}`}
+      className={`flex flex-col rounded-4xl xl:w-[416px] lg:w-[365px] md:w-[217px] w-[198px] gap-3 lg:gap-5 ${className}`}
     >
       <div className="relative xl:w-[416px] lg:w-[365px] md:w-[217px] w-[198px]">
         <div className="h-[198px] xl:h-[416px] lg:h-[365px] md:h-[217px]">
@@ -59,7 +59,7 @@ const Card = ({ title, image, labels, className }: Props) => {
       </div>
 
       {/* Title below image */}
-      <h3 className="mt-2 text-sm font-semibold">{title}</h3>
+      <span className="text-base lg:text-2xl xl:text-3xl">{title}</span>
     </div>
   )
 }
