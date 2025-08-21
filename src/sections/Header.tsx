@@ -2,9 +2,7 @@ import React from "react"
 
 import { Button } from "@/components"
 
-type Props = {}
-
-const Header = ({}: Props) => {
+const Header = () => {
   return (
     <div className="flex flex-col items-center gap-2.5 h-[156px] md:h-[254px] lg:h-[431px]">
       <Button

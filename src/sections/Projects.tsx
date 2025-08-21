@@ -6,9 +6,7 @@ import { Cards } from "@/containers"
 import { fetchData } from "@/scripts/useFetchData"
 import { ProjectType } from "@/types"
 
-type Props = {}
-
-const Projects = ({}: Props) => {
+const Projects = () => {
   const [projects, setProjects] = useState<ProjectType[]>([])
   useEffect(() => {
     const fetchOptions = async () => {
