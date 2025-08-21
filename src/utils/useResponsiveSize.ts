@@ -13,14 +13,13 @@ const getSize = (width: number): BreakpointSizeType => {
 }
 
 const useResponsiveSize = (): BreakpointSizeType => {
-  const [size, setSize] = useState<BreakpointSizeType>(() =>
-    getSize(window.innerWidth)
-  )
+  const [size, setSize] = useState<BreakpointSizeType>("xs")
 
   useEffect(() => {
-    const handler = () => setSize(getSize(window.innerWidth))
-    window.addEventListener("resize", handler)
-    return () => window.removeEventListener("resize", handler)
+    const updateSize = () => setSize(getSize(window.innerWidth))
+    updateSize() // Set initial size after mount
+    window.addEventListener("resize", updateSize)
+    return () => window.removeEventListener("resize", updateSize)
   }, [])
 
   return size
