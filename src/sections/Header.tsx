@@ -13,10 +13,10 @@ const Header = ({}: Props) => {
       >
         Hello!
       </Button>
-      <h1 className="text-center">
+      <span className="text-center large">
         I&apos;m <span className="text-primary">Mariah</span>, a Full Stack
         Developer
-      </h1>
+      </span>
     </div>
   )
 }

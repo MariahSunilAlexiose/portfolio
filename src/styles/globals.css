@@ -44,11 +44,11 @@
   }
 
   h1 {
-    @apply scroll-m-20 text-2xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-8xl;
+    @apply text-2xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-8xl;
   }
 
   h2 {
-    @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
+    @apply text-xl font-bold tracking-tight md:text-3xl lg:text-4xl xl:text-5xl;
   }
 
   h3 {
@@ -64,7 +64,7 @@
   }
 
   .large {
-    @apply text-lg font-semibold;
+    @apply text-2xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-8xl;
   }
 
   .small {
