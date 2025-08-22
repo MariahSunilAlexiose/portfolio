@@ -4,7 +4,7 @@ export const ButtonVariants = {
     destructive:
       "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/85",
     outline:
-      "border rounded border-input bg-background shadow-sm hover:bg-accent hover:text-foreground",
+      "border rounded border-input shadow-sm hover:bg-accent hover:text-foreground",
     accent: "bg-accent text-foreground shadow-sm hover:bg-accent/85",
     primary: "bg-primary text-background shadow hover:bg-primary/85",
     link: "text-primary hover:text-primary/85 underline-offset-4 hover:underline",
@@ -17,6 +17,6 @@ export const ButtonVariants = {
     xs: "h-4 p-3 rounded-md text-xs font-bold",
     sm: "h-8 rounded-md px-3 text-sm",
     lg: "h-10 rounded-md px-8 text-lg",
-    icon: "h-5 w-9",
+    icon: "h-[76px] w-[76px]",
   },
 }

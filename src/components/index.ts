@@ -1,3 +1,4 @@
+import AboutContainer from "./AboutContainer"
 import Button from "./Button"
 import Card from "./Card"
 import Footer from "./Footer"
@@ -9,6 +10,7 @@ import Pagination from "./Pagination"
 import Skeleton from "./Skeleton"
 
 export {
+  AboutContainer,
   IconInputBox,
   Skeleton,
   Footer,

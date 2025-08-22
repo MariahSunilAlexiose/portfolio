@@ -1,5 +1,3 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props"
-
 /* eslint-disable */
 export type ButtonProps = {
   variant?:
@@ -26,9 +24,12 @@ export type FooterSocialMediaProps = {
   link: string
 }
 
-export type IconType = {
-  img: StaticImport
+export type LogoType = {
+  id: number
   name: string
+  image: string
+  imageWhite?: string
+  category: string
 }
 
 export type ProjectType = {

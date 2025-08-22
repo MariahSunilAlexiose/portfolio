@@ -52,11 +52,11 @@
   }
 
   h3 {
-    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+    @apply text-4xl font-semibold tracking-tight md:text-6xl;
   }
 
   h4 {
-    @apply scroll-m-20 text-xl font-semibold tracking-tight;
+    @apply text-sm font-semibold tracking-tight md:text-2xl;
   }
 
   p {
