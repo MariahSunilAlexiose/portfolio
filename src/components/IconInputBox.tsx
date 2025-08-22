@@ -13,10 +13,7 @@ const IconInputBox = () => {
   return (
     <div className="border-muted-foreground flex items-center justify-between rounded-full border px-4 py-1 md:py-2 lg:py-4 xl:py-3">
       <div className="flex items-center gap-2 md:gap-3">
-        <Button
-          // size="icon"
-          className="bg-accent flex items-center !rounded-full p-2"
-        >
+        <Button className="bg-accent flex items-center !rounded-full p-2">
           <Image
             src={EnvelopeIcon}
             alt="Envelope Icon"
