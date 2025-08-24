@@ -5,7 +5,6 @@ import React from "react"
 import Image from "next/image"
 
 import { ActiveDotIcon, DotIcon } from "@/icons"
-import { ButtonProps } from "@/types"
 
 /* eslint-disable */
 type Props = {
@@ -16,28 +15,23 @@ type Props = {
 }
 /* eslint-enable */
 
-const PaginationItem = React.forwardRef(function PaginationItem(
-  { className, ...props }: React.ComponentProps<"li">,
-  ref: React.Ref<HTMLLIElement>
-) {
-  return <li ref={ref} className={className} {...props} />
-})
-
-type PaginationLinkProps = {
-  isActive?: boolean
-} & Pick<ButtonProps, "size"> &
-  React.ComponentProps<"button">
-
 const PaginationLink = ({
   isActive,
-  className,
-  ...props
-}: PaginationLinkProps) => (
+  onClick,
+  children,
+}: {
+  isActive?: boolean
+  onClick?: () => void
+  children: React.ReactNode
+}) => (
   <button
-    className={`focus:outline-none ${className ?? ""}`}
+    type="button"
+    className="cursor-pointer"
     aria-current={isActive ? "page" : undefined}
-    {...props}
-  />
+    onClick={onClick}
+  >
+    {children}
+  </button>
 )
 
 const Pagination = ({
@@ -50,36 +44,48 @@ const Pagination = ({
 
   if (totalPages <= 1) return null // Hide pagination if there's only one page
 
+  const pageNumbers = []
+  for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
+    pageNumbers.push(i)
+  }
+
+  const maxPageNum = 5 // Maximum page numbers to display at once
+  const pageNumLimit = Math.floor(maxPageNum / 2) // Current page should be in the middle if possible
+
+  let activePages = pageNumbers.slice(
+    Math.max(0, currentPage - 1 - pageNumLimit),
+    Math.min(currentPage - 1 + pageNumLimit + 1, pageNumbers.length)
+  )
+
+  // Function to render page numbers with ellipsis
+  const renderPages = () => {
+    const renderedPages = activePages.map((page, idx) => {
+      const isActive = currentPage === page
+      return (
+        <PaginationLink
+          key={idx}
+          isActive={isActive}
+          onClick={() => setCurrentPage(page)}
+        >
+          <Image
+            src={isActive ? ActiveDotIcon : DotIcon}
+            alt={isActive ? "Active page dot" : "Page dot"}
+            className={isActive ? "h-[13px] w-[65px]" : "h-[13px] w-[13px]"}
+          />
+        </PaginationLink>
+      )
+    })
+
+    return renderedPages
+  }
+
   return (
     <nav
       role="navigation"
       aria-label="pagination"
       className="mx-auto flex w-full justify-center"
     >
-      <ul className="flex flex-row items-center justify-center gap-5">
-        {Array.from({ length: totalPages }, (_, index) => {
-          const page = index + 1
-          const isActive = page === currentPage
-
-          return (
-            <PaginationItem key={page}>
-              <PaginationLink
-                isActive={isActive}
-                aria-label={`Go to page ${page}`}
-                onClick={() => setCurrentPage(page)}
-              >
-                <Image
-                  src={isActive ? ActiveDotIcon : DotIcon}
-                  alt={isActive ? "Active page dot" : "Page dot"}
-                  className={
-                    isActive ? "h-[13px] w-[67px]" : "h-[13px] w-[13px]"
-                  }
-                />
-              </PaginationLink>
-            </PaginationItem>
-          )
-        })}
-      </ul>
+      <ul className="flex pl-0! items-center gap-1">{renderPages()}</ul>
     </nav>
   )
 }
