@@ -42,7 +42,7 @@ const StarterPage = () => {
   const { theme } = useTheme()
   return (
     <div className="flex flex-col gap-4">
-      <PageHeader />
+      <PageHeader page="starterPage" />
       <div className="flex flex-col gap-13 md:gap-24">
         {/* intro */}
         <div className="flex flex-col md:flex-row gap-6 md:justify-center">

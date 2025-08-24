@@ -11,7 +11,11 @@ import { useTheme } from "@/providers"
 import { fetchData } from "@/scripts/useFetchData"
 import { LogoType, PageDataType } from "@/types"
 
-const PageHeader = () => {
+type Props = {
+  page: string
+}
+
+const PageHeader = ({ page }: Props) => {
   const { theme } = useTheme()
   const [data, setData] = useState<PageDataType>({
     title: "",
@@ -22,11 +26,11 @@ const PageHeader = () => {
   })
   useEffect(() => {
     const fetchOptions = async () => {
-      const pageData = await fetchData<PageDataType>("starterPage")
+      const pageData = await fetchData<PageDataType>(page)
       setData(pageData)
     }
     fetchOptions()
-  }, [])
+  }, [page])
   return (
     <div className="flex flex-col gap-4">
       <div className="flex justify-between items-center mx-4">
