@@ -72,7 +72,7 @@ const Pagination = ({
                   src={isActive ? ActiveDotIcon : DotIcon}
                   alt={isActive ? "Active page dot" : "Page dot"}
                   className={
-                    isActive ? "w-[67px] h-[13px]" : "h-[13px] w-[13px]"
+                    isActive ? "h-[13px] w-[67px]" : "h-[13px] w-[13px]"
                   }
                 />
               </PaginationLink>

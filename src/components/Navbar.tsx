@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className="flex items-center justify-between rounded-full bg-foreground px-6 py-2 md:px-14 md:py-[14px] lg:px-15 lg:py-[17.5px] xl:px-16 xl:py-7">
+      <nav className="bg-foreground flex items-center justify-between rounded-full px-6 py-2 md:px-14 md:py-[14px] lg:px-15 lg:py-[17.5px] xl:px-16 xl:py-7">
         <Link href="/">
           <Image
             src={
@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className="flex items-center gap-7">
           <a
             href="/about-me"
-            className="font-sf-display text-xs font-bold text-background md:text-sm lg:text-base xl:text-xl"
+            className="font-sf-display text-background text-xs font-bold md:text-sm lg:text-base xl:text-xl"
           >
             About Me
           </a>

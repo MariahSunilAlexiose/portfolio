@@ -33,21 +33,21 @@ const PageHeader = ({ page }: Props) => {
   }, [page])
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex justify-between items-center mx-4">
+      <div className="mx-4 flex items-center justify-between">
         {data.labels &&
           data.labels.split(";").map((label: string, index: number) => (
             <Button
               key={index}
               variant="primary"
-              className="text-xs px-2 py-1 shadow-md"
+              className="px-2 py-1 text-xs shadow-md"
             >
               {label.trim()}
             </Button>
           ))}
-        <div className="flex gap-7 items-center">
+        <div className="flex items-center gap-7">
           <Button
             size="icon"
-            className="p-1! h-7! w-7!"
+            className="h-7! w-7! p-1!"
             onClick={() => window.open(data.github, "_blank")}
           >
             <Image
@@ -55,12 +55,12 @@ const PageHeader = ({ page }: Props) => {
               alt="Github Icon"
               width={24}
               height={24}
-              className="w-6 h-6"
+              className="h-6 w-6"
             />
           </Button>
           <Button
             size="icon"
-            className="p-1! h-7! w-7!"
+            className="h-7! w-7! p-1!"
             onClick={() => window.open(data.figma, "_blank")}
           >
             <Image
@@ -68,13 +68,13 @@ const PageHeader = ({ page }: Props) => {
               alt="Figma Icon"
               width={20}
               height={20}
-              className="w-5 h-5"
+              className="h-5 w-5"
             />
           </Button>
         </div>
       </div>
       <h1>{data.title}</h1>
-      <div className="flex flex-wrap gap-x-6 gap-y-5 justify-center">
+      <div className="flex flex-wrap justify-center gap-x-6 gap-y-5">
         {data.tools.map((tool: LogoType) => (
           <Button key={tool.id} variant="outline" size="icon">
             <Image
@@ -82,7 +82,7 @@ const PageHeader = ({ page }: Props) => {
               alt={tool.name}
               width={36}
               height={36}
-              className="w-9 h-9"
+              className="h-9 w-9"
             />
           </Button>
         ))}

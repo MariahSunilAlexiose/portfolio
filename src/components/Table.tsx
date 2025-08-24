@@ -7,7 +7,7 @@ const TableHeader = ({
   return (
     <thead
       data-slot="table-header"
-      className={`[&_tr]:border bg-accent ${className}`}
+      className={`bg-accent [&_tr]:border ${className}`}
       {...props}
     />
   )

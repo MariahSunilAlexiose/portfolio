@@ -24,7 +24,7 @@ const ProfileProjectPage = () => {
     <div className="flex flex-col gap-4">
       <PageHeader page="profilePage" />
       <div className="flex flex-col gap-13 md:gap-24">
-        <div className="flex flex-col md:flex-row gap-6 md:justify-center">
+        <div className="flex flex-col gap-6 md:flex-row md:justify-center">
           <div className="flex flex-col gap-6 md:flex-1">
             <p>
               This blog post is a little meta—in the best way possible. I&apos;m
@@ -54,7 +54,7 @@ const ProfileProjectPage = () => {
               posts.
             </p>
           </div>
-          <div className="flex justify-center items-center md:flex-1">
+          <div className="flex items-center justify-center md:flex-1">
             <Image
               src={theme === dark ? ProfileHomeDarkImg : ProfileHomeImg}
               alt="Starter Home Image"

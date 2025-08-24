@@ -14,7 +14,7 @@ const Button = ({
   return (
     <button
       type={type}
-      className={`${className} ${ButtonVariants.variant[variant]} ${ButtonVariants.size[size]} inline-flex cursor-pointer items-center justify-center rounded-md text-sm font-medium whitespace-nowrap transition-colors duration-300 ease-out focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50`}
+      className={`${className} ${ButtonVariants.variant[variant]} ${ButtonVariants.size[size]} focus-visible:ring-ring inline-flex cursor-pointer items-center justify-center rounded-md text-sm font-medium whitespace-nowrap transition-colors duration-300 ease-out focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50`}
       onClick={onClick}
     >
       {children}

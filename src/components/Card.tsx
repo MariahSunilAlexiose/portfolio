@@ -24,10 +24,10 @@ const Card = ({ title, image, labels, className, page }: Props) => {
   const router = useRouter()
   return (
     <div
-      className={`flex flex-col rounded-4xl xl:w-[416px] lg:w-[365px] md:w-[217px] w-[198px] gap-3 lg:gap-5 ${className}`}
+      className={`flex w-[198px] flex-col gap-3 rounded-4xl md:w-[217px] lg:w-[365px] lg:gap-5 xl:w-[416px] ${className}`}
     >
-      <div className="relative xl:w-[416px] lg:w-[365px] md:w-[217px] w-[198px]">
-        <div className="h-[198px] xl:h-[416px] lg:h-[365px] md:h-[217px]">
+      <div className="relative w-[198px] md:w-[217px] lg:w-[365px] xl:w-[416px]">
+        <div className="h-[198px] md:h-[217px] lg:h-[365px] xl:h-[416px]">
           {/* Image */}
           <Image
             src={`/assets/images/${image}`}
@@ -41,12 +41,12 @@ const Card = ({ title, image, labels, className, page }: Props) => {
         </div>
 
         {/* Labels on Image */}
-        <div className="absolute top-4 left-4 flex flex-wrap gap-2 z-10">
+        <div className="absolute top-4 left-4 z-10 flex flex-wrap gap-2">
           {labels &&
             labels.split(";").map((label: string, index: number) => (
               <Button
                 key={index}
-                className="bg-foreground text-background text-xs px-2 py-1 shadow-md"
+                className="bg-foreground text-background px-2 py-1 text-xs shadow-md"
               >
                 {label.trim()}
               </Button>
@@ -55,13 +55,13 @@ const Card = ({ title, image, labels, className, page }: Props) => {
 
         {/* Arrow Button */}
         <Button
-          className="absolute bottom-0 right-0 px-3 lg:px-6 lg:py-9 xl:py-9 rounded-full!"
+          className="absolute right-0 bottom-0 rounded-full! px-3 lg:px-6 lg:py-9 xl:py-9"
           onClick={() => router.push(page)}
         >
           <Image
             src={theme === dark ? ArrowUpRightBlackIcon : ArrowUpRightWhiteIcon}
             alt="Arrow Up Right Icon"
-            className="w-2.5 h-2.5 md:w-4 md:h-4 lg:w-8 lg:h-8"
+            className="h-2.5 w-2.5 md:h-4 md:w-4 lg:h-8 lg:w-8"
           />
         </Button>
       </div>

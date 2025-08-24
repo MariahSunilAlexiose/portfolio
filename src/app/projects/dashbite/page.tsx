@@ -60,7 +60,7 @@ const DashbiteProjectPage = () => {
     <div className="flex flex-col gap-4">
       <PageHeader page="dashbitePage" />
       <div className="flex flex-col gap-13 md:gap-24">
-        <div className="flex flex-col md:flex-row gap-6 md:justify-center">
+        <div className="flex flex-col gap-6 md:flex-row md:justify-center">
           <div className="flex flex-col gap-6 md:flex-1">
             <p>
               DashBite is designed to be a full-stack web application that
@@ -75,7 +75,7 @@ const DashbiteProjectPage = () => {
               <li>Admin Dashboard (React-based interface for management)</li>
             </ul>
           </div>
-          <div className="flex justify-center items-center md:flex-1">
+          <div className="flex items-center justify-center md:flex-1">
             <Image
               src={theme === dark ? DashbiteHomeDarkImg : DashbiteHomeImg}
               alt="Starter Home Image"
@@ -250,28 +250,28 @@ const DashbiteProjectPage = () => {
               Uses useToast() to display error messages when API calls fail.
             </li>
           </ul>
-          <div className="flex lg:flex-wrap gap-auto">
-            <div className="flex relative justify-center items-center lg:w-1/3 w-full">
+          <div className="gap-auto flex lg:flex-wrap">
+            <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image
                 src={theme === dark ? CartDarkImg : CartImg}
                 alt="Cart Image"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">Cart Page</Button>
+              <Button className="absolute bottom-4 left-4">Cart Page</Button>
             </div>
-            <div className="flex relative justify-center items-center lg:w-1/3 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image
                 src={theme === dark ? DeliveryInfoDarkImg : DeliveryInfoImg}
                 alt="Delivery Information Image"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 Delivery Info Page on clicking the Checkout Button
               </Button>
             </div>
-            <div className="flex relative justify-center items-center lg:w-1/3 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image src={StripeImg} alt="Stripe Image" className="w-full" />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 Stripe Page on clicking Proceed to Payment Button
               </Button>
             </div>
@@ -299,98 +299,98 @@ const DashbiteProjectPage = () => {
               state with backend integration.
             </li>
           </ul>
-          <div className="flex lg:flex-wrap gap-auto">
-            <div className="flex relative justify-center items-center lg:w-1/3 w-full">
+          <div className="gap-auto flex lg:flex-wrap">
+            <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image
                 src={theme === dark ? DishDarkImg : DishImg}
                 alt="Dish Image"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">Dish Page</Button>
+              <Button className="absolute bottom-4 left-4">Dish Page</Button>
             </div>
-            <div className="flex relative justify-center items-center lg:w-1/3 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image
                 src={theme === dark ? PhotosDarkImg : PhotosImg}
                 alt="Photos Tab of Restaurant Page"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 Photos Tab of Restaurant Page
               </Button>
             </div>
-            <div className="flex relative justify-center items-center lg:w-1/3 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image
                 src={theme === dark ? ReviewsDarkImg : ReviewsImg}
                 alt="Reviews Tab of Restaurant Page"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 Reviews Tab of Restaurant Page
               </Button>
             </div>
-            <div className="flex relative justify-center items-center lg:w-1/3 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image
                 src={theme === dark ? OverviewDarkImg : OverviewImg}
                 alt="Overview Tab of Restaurant Page"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 Overview Tab of Restaurant Page
               </Button>
             </div>
-            <div className="flex relative justify-center items-center lg:w-1/3 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image
                 src={theme === dark ? LoginDarkImg : LoginImg}
                 alt="Login Page"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">Login Page</Button>
+              <Button className="absolute bottom-4 left-4">Login Page</Button>
             </div>
-            <div className="flex relative justify-center items-center lg:w-1/3 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image
                 src={theme === dark ? SignupDarkImg : SignupImg}
                 alt="Sign up Page"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">Sign up Page</Button>
+              <Button className="absolute bottom-4 left-4">Sign up Page</Button>
             </div>
-            <div className="flex relative justify-center items-center lg:w-1/3 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image
                 src={theme === dark ? ProfileHomeDarkImg : ProfileHomeImg}
                 alt="Profile Page of Logged In User"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 Profile Page of Logged In User
               </Button>
             </div>
-            <div className="flex relative justify-center items-center lg:w-1/3 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image
                 src={theme === dark ? AddressDarkImg : AddressImg}
                 alt="Address Page of Logged In User"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 Address Page of Logged In User
               </Button>
             </div>
-            <div className="flex relative justify-center items-center lg:w-1/3 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image
                 src={theme === dark ? ReviewsDarkImg : ReviewsImg}
                 alt="Reviews Page of Logged In User"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 Reviews Page of Logged In User
               </Button>
             </div>
-            <div className="flex relative justify-center items-center lg:w-1/3 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image
                 src={theme === dark ? OrderHistoryDarkImg : OrderHistoryImg}
                 alt="Order History Page of Logged In User"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 Order History Page of Logged In User
               </Button>
             </div>
@@ -627,43 +627,43 @@ const DashbiteProjectPage = () => {
             </li>
           </ul>
           <div className="flex lg:flex-wrap">
-            <div className="flex relative justify-center items-center lg:w-1/2 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/2">
               <Image
                 src={theme === dark ? RestaurantsDarkImg : RestaurantsImg}
                 alt="Restaurants Table Image"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 Restaurants Table
               </Button>
             </div>
-            <div className="flex relative justify-center items-center lg:w-1/2 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/2">
               <Image
                 src={theme === dark ? RestaurantDarkImg : RestaurantImg}
                 alt="View of a restaurant Image"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 View of a restaurant
               </Button>
             </div>
-            <div className="flex relative justify-center items-center lg:w-1/2 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/2">
               <Image
                 src={theme === dark ? AddRestaurantDarkImg : AddFormImg}
                 alt="Add Restaurant Form Image"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 Form to add new restaurant
               </Button>
             </div>
-            <div className="flex relative justify-center items-center lg:w-1/2 w-full">
+            <div className="relative flex w-full items-center justify-center lg:w-1/2">
               <Image
                 src={theme === dark ? UpdateRestaurantDarkImg : UpdateFormImg}
                 alt="Form to update details of a restaurant Image"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 Form to update details of a restaurant
               </Button>
             </div>

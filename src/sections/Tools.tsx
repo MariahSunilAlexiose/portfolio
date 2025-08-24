@@ -35,10 +35,10 @@ const Tools = () => {
     <div className="space-y-8">
       {Object.entries(groupedLogos).map(([category, logos]) => (
         <div key={category}>
-          <p className="text-sm md:text-2xl mb-3">
+          <p className="mb-3 text-sm md:text-2xl">
             {categoryLabels[category] || category}:
           </p>
-          <div className="flex flex-wrap gap-x-6 gap-y-5 justify-center md:justify-start">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-5 md:justify-start">
             {logos.map((logo) => (
               <Button key={logo.id} variant="outline" size="icon">
                 <Image
@@ -46,7 +46,7 @@ const Tools = () => {
                   alt={logo.name}
                   width={36}
                   height={36}
-                  className="w-9 h-9"
+                  className="h-9 w-9"
                 />
               </Button>
             ))}

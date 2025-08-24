@@ -45,7 +45,7 @@ const StarterPage = () => {
       <PageHeader page="starterPage" />
       <div className="flex flex-col gap-13 md:gap-24">
         {/* intro */}
-        <div className="flex flex-col md:flex-row gap-6 md:justify-center">
+        <div className="flex flex-col gap-6 md:flex-row md:justify-center">
           <div className="flex flex-col gap-6 md:flex-1">
             <p>
               In today&apos;s fast-paced web development landscape, having a
@@ -60,7 +60,7 @@ const StarterPage = () => {
               productivity.
             </p>
           </div>
-          <div className="flex justify-center items-center md:flex-1">
+          <div className="flex items-center justify-center md:flex-1">
             <Image
               src={theme === dark ? StarterHomeDarkImg : StarterHomeImg}
               alt="Starter Home Image"
@@ -413,7 +413,7 @@ const StarterPage = () => {
             accessible, and styled entirely with Tailwind CSS, making them easy
             to integrate and extend.
           </p>
-          <div className="flex flex-col lg:flex-row gap-6">
+          <div className="flex flex-col gap-6 lg:flex-row">
             <div className="flex flex-col gap-6 lg:w-3/4">
               <h2>✨ Key Features</h2>
               <ul>
@@ -440,65 +440,65 @@ const StarterPage = () => {
                 aligned with my Tailwind-based design system.
               </p>
             </div>
-            <div className="flex flex-col gap-6 w-full">
-              <div className="flex relative justify-center items-center w-full">
+            <div className="flex w-full flex-col gap-6">
+              <div className="relative flex w-full items-center justify-center">
                 <Image
                   src={theme === dark ? ErrorToastDarkImg : ErrorToastImg}
                   alt="Error Toast Image"
                   className="w-full"
                 />
-                <Button className="absolute left-4 bottom-4">
+                <Button className="absolute bottom-4 left-4">
                   Clicking Danger Button will activate an Error toast
                 </Button>
               </div>
-              <div className="flex relative justify-center items-center w-full">
+              <div className="relative flex w-full items-center justify-center">
                 <Image
                   src={theme === dark ? InfoToastDarkImg : InfoToastImg}
                   alt="Information Toast Image"
                   className="w-full"
                 />
-                <Button className="absolute left-4 bottom-4">
+                <Button className="absolute bottom-4 left-4">
                   Clicking Info Button will activate an Information toast
                 </Button>
               </div>
-              <div className="flex relative justify-center items-center w-full">
+              <div className="relative flex w-full items-center justify-center">
                 <Image
                   src={theme === dark ? SuccessToastDarkImg : SuccessToastImg}
                   alt="Success Toast Image"
                   className="w-full"
                 />
-                <Button className="absolute left-4 bottom-4">
+                <Button className="absolute bottom-4 left-4">
                   Clicking Success Button will activate an Success toast
                 </Button>
               </div>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row gap-6">
-            <div className="flex relative justify-center items-center w-full lg:w-1/2">
+          <div className="flex flex-col gap-6 lg:flex-row">
+            <div className="relative flex w-full items-center justify-center lg:w-1/2">
               <Image
                 src={theme === dark ? SecondTabDarkImg : SecondTabImg}
                 alt="Second Tab Image"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 Second Tab that contains Accordion, Alert, TextArea, RadioGroup,
                 Dialog and Combobox
               </Button>
             </div>
 
-            <div className="flex relative justify-center items-center w-full lg:w-1/2">
+            <div className="relative flex w-full items-center justify-center lg:w-1/2">
               <Image
                 src={theme === dark ? FirstTabDarkImg : FirstTabImg}
                 alt="First Tab Image"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 First Tab that contains Carousel with Pagination
               </Button>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row gap-6">
-            <div className="flex relative justify-center items-center w-full lg:w-1/2">
+          <div className="flex flex-col gap-6 lg:flex-row">
+            <div className="relative flex w-full items-center justify-center lg:w-1/2">
               <Image
                 src={
                   theme === dark
@@ -508,17 +508,17 @@ const StarterPage = () => {
                 alt="Navbar with Theme Toggle and Banner Image"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">
+              <Button className="absolute bottom-4 left-4">
                 Navbar with Theme Toggle and Banner
               </Button>
             </div>
-            <div className="flex relative justify-center items-center w-full lg:w-1/2">
+            <div className="relative flex w-full items-center justify-center lg:w-1/2">
               <Image
                 src={theme === dark ? FooterDarkImg : FooterImg}
                 alt="Footer Image"
                 className="w-full"
               />
-              <Button className="absolute left-4 bottom-4">Footer</Button>
+              <Button className="absolute bottom-4 left-4">Footer</Button>
             </div>
           </div>
         </div>
@@ -544,13 +544,13 @@ const StarterPage = () => {
             This branch serves as a lean, production-ready starting
             point—focused purely on structure and design foundations.
           </p>
-          <div className="flex relative justify-center items-center md:flex-1">
+          <div className="relative flex items-center justify-center md:flex-1">
             <Image
               src={theme === dark ? MainBranchDarkImg : MainBranchImg}
               alt="Main Branch Image"
               className="w-full"
             />
-            <Button className="absolute left-4 bottom-4">
+            <Button className="absolute bottom-4 left-4">
               Main branch only displays ThemeToggle
             </Button>
           </div>

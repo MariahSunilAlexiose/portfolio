@@ -31,7 +31,7 @@ function Cards({ data }: Props) {
       <ClipPathXLSVG />
       <ClipPathLGSVG />
       <div className="flex flex-col gap-2">
-        <div className="flex overflow-x-auto gap-5 justify-center min-[528px]:justify-start min-[1535px]:justify-center scrollbar-hide scrollbar-hide::-webkit-scrollbar">
+        <div className="scrollbar-hide scrollbar-hide::-webkit-scrollbar flex justify-center gap-5 overflow-x-auto min-[528px]:justify-start min-[1535px]:justify-center">
           {currentItems.map((item: ProjectType, index: number) => {
             const isPartial = itemsPerPage === 2 && index === 2
             return (
