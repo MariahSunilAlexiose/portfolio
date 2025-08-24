@@ -5,7 +5,6 @@ import AddressImg from "./address.png"
 import BannerLgImg from "./banner-lg.png"
 import BannerSmImg from "./banner-sm.png"
 import BannerXlImg from "./banner-xl.png"
-import BgPatternsImg from "./bg-patterns.png"
 import CartDarkImg from "./cart-dark.png"
 import CartImg from "./cart.png"
 import DashbiteCardOriginalImg from "./dashbite-card-original.png"
@@ -67,4 +66,4 @@ import SuccessToastImg from "./success-toast.png"
 import UpdateRestaurantDarkImg from "./update-restaurant-dark.png"
 import UpdateFormImg from "./updateform.png"
 
-export {AddRestaurantDarkImg, AddFormImg, AddressDarkImg, AddressImg, BannerLgImg, BannerSmImg, BannerXlImg, BgPatternsImg, CartDarkImg, CartImg, DashbiteCardImg, DashbiteCardOriginalImg, DashbiteHomeDarkImg, DashbiteHomeImg, DeliveryInfoDarkImg, DeliveryInfoImg, DishDarkImg, DishImg, ERDImg, ErrorToastDarkImg, ErrorToastImg, FirstTabDarkImg, FirstTabImg, FooterDarkImg, FooterImg, InfoToastDarkImg, InfoToastImg, JiraDarkImg, JiraImg, LoginDarkImg, LoginImg, MainBranchDarkImg, MainBranchImg, MyProfileDarkImg, MyProfileImg, MyReviewsDarkImg, MyReviewsImg, NavbarThemeBannerDarkImg, NavbarThemeBannerImg, OrderHistoryDarkImg, OrderHistoryImg, OverviewDarkImg, OverviewImg, PhotosDarkImg, PhotosImg, ProfileCardImg, ProfileCardOriginalImg, ProfileHomeDarkImg, ProfileHomeImg, RestaurantDarkImg, RestaurantImg, RestaurantsDarkImg, RestaurantsImg, ReviewsDarkImg, ReviewsImg, SecondTabDarkImg, SecondTabImg, SignupImg, SignupDarkImg, StarterCardImg, StarterCardOriginalImg, StarterHomeDarkImg, StarterHomeImg, StripeImg, SuccessToastDarkImg, SuccessToastImg, UpdateFormImg, UpdateRestaurantDarkImg}
+export {AddRestaurantDarkImg, AddFormImg, AddressDarkImg, AddressImg, BannerLgImg, BannerSmImg, BannerXlImg, CartDarkImg, CartImg, DashbiteCardImg, DashbiteCardOriginalImg, DashbiteHomeDarkImg, DashbiteHomeImg, DeliveryInfoDarkImg, DeliveryInfoImg, DishDarkImg, DishImg, ERDImg, ErrorToastDarkImg, ErrorToastImg, FirstTabDarkImg, FirstTabImg, FooterDarkImg, FooterImg, InfoToastDarkImg, InfoToastImg, JiraDarkImg, JiraImg, LoginDarkImg, LoginImg, MainBranchDarkImg, MainBranchImg, MyProfileDarkImg, MyProfileImg, MyReviewsDarkImg, MyReviewsImg, NavbarThemeBannerDarkImg, NavbarThemeBannerImg, OrderHistoryDarkImg, OrderHistoryImg, OverviewDarkImg, OverviewImg, PhotosDarkImg, PhotosImg, ProfileCardImg, ProfileCardOriginalImg, ProfileHomeDarkImg, ProfileHomeImg, RestaurantDarkImg, RestaurantImg, RestaurantsDarkImg, RestaurantsImg, ReviewsDarkImg, ReviewsImg, SecondTabDarkImg, SecondTabImg, SignupImg, SignupDarkImg, StarterCardImg, StarterCardOriginalImg, StarterHomeDarkImg, StarterHomeImg, StripeImg, SuccessToastDarkImg, SuccessToastImg, UpdateFormImg, UpdateRestaurantDarkImg}
