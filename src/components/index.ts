@@ -8,8 +8,26 @@ import Label from "./Label"
 import Navbar from "./Navbar"
 import Pagination from "./Pagination"
 import Skeleton from "./Skeleton"
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "./Table"
 
 export {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
   AboutContainer,
   IconInputBox,
   Skeleton,
