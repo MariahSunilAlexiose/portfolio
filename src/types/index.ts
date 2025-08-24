@@ -37,6 +37,7 @@ export type ProjectType = {
   title: string
   image: string
   labels: string
+  page: string
 }
 
 export type BreakpointSizeType = "xs" | "sm" | "lg" | "xl"

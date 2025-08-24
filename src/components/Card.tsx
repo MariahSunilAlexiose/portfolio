@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 import { dark } from "@/context"
 import { ArrowUpRightBlackIcon, ArrowUpRightWhiteIcon } from "@/icons"
@@ -12,11 +15,13 @@ type Props = {
   image: string
   labels: string
   className?: string
+  page: string
 }
 
-const Card = ({ title, image, labels, className }: Props) => {
+const Card = ({ title, image, labels, className, page }: Props) => {
   const { theme } = useTheme()
   const size = useResponsiveSize()
+  const router = useRouter()
   return (
     <div
       className={`flex flex-col rounded-4xl xl:w-[416px] lg:w-[365px] md:w-[217px] w-[198px] gap-3 lg:gap-5 ${className}`}
@@ -49,10 +54,13 @@ const Card = ({ title, image, labels, className }: Props) => {
         </div>
 
         {/* Arrow Button */}
-        <Button className="absolute bottom-0 right-0 px-3 lg:px-6 lg:py-9 xl:py-9 rounded-full!">
+        <Button
+          className="absolute bottom-0 right-0 px-3 lg:px-6 lg:py-9 xl:py-9 rounded-full!"
+          onClick={() => router.push(page)}
+        >
           <Image
             src={theme === dark ? ArrowUpRightBlackIcon : ArrowUpRightWhiteIcon}
-            alt={title}
+            alt="Arrow Up Right Icon"
             className="w-2.5 h-2.5 md:w-4 md:h-4 lg:w-8 lg:h-8"
           />
         </Button>

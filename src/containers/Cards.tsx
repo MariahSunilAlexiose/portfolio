@@ -11,6 +11,7 @@ type Props = {
     title: string
     image: string
     labels: string
+    page: string
   }[]
 }
 
@@ -40,6 +41,7 @@ function Cards({ data }: Props) {
                 image={item.image}
                 labels={item.labels}
                 className={isPartial ? "w-[50%] opacity-50" : ""}
+                page={item.page}
               />
             )
           })}
