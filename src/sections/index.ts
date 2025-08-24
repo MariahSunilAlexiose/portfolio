@@ -1,7 +1,8 @@
 import Banner from "./Banner"
 import Contact from "./Contact"
 import Header from "./Header"
+import PageHeader from "./PageHeader"
 import Projects from "./Projects"
 import Tools from "./Tools"
 
-export { Tools, Contact, Banner, Header, Projects }
+export { PageHeader, Tools, Contact, Banner, Header, Projects }

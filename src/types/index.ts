@@ -41,3 +41,11 @@ export type ProjectType = {
 }
 
 export type BreakpointSizeType = "xs" | "sm" | "lg" | "xl"
+
+export type PageDataType = {
+  title: string
+  labels: string
+  figma: string
+  github: string
+  tools: LogoType[]
+}
