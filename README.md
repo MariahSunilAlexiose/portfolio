@@ -1,6 +1,6 @@
 # 🌟 Mariah Sunil Alexiose – Portfolio Website
 
-Welcome to the GitHub repository for my personal portfolio website! This site is a curated showcase of my work, skills, and accomplishments as a [your role or field—e.g., software developer, data analyst, UX designer].
+Welcome to the GitHub repository for my personal portfolio website! This site is a curated showcase of my work, skills, and accomplishments as a developer.
 
 ## 📄 About This Project
 This portfolio website was built to highlight:
