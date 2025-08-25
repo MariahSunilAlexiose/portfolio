@@ -17,8 +17,7 @@ const Footer = () => {
   const [icons, setIcons] = useState<FooterSocialMediaProps[]>([])
   useEffect(() => {
     const fetchOptions = async () => {
-      const newIcon =
-        await fetchData<FooterSocialMediaProps[]>("footerSocialMedia")
+      const newIcon = await fetchData<FooterSocialMediaProps[]>("footer-social")
       setIcons(newIcon)
     }
     fetchOptions()

@@ -58,7 +58,7 @@ const DashbiteProjectPage = () => {
   const { theme } = useTheme()
   return (
     <div className="flex flex-col gap-4">
-      <PageHeader page="dashbitePage" />
+      <PageHeader page="dashbite" />
       <div className="flex flex-col gap-13 md:gap-24">
         <div className="flex flex-col gap-6 md:flex-row md:justify-center">
           <div className="flex flex-col gap-6 md:flex-1">

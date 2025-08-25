@@ -26,7 +26,7 @@ const PageHeader = ({ page }: Props) => {
   })
   useEffect(() => {
     const fetchOptions = async () => {
-      const pageData = await fetchData<PageDataType>(page)
+      const pageData = await fetchData<PageDataType>(`/pages/${page}`)
       setData(pageData)
     }
     fetchOptions()
