@@ -16,10 +16,10 @@ import {
 } from "@/components"
 import { dark } from "@/context"
 import {
+  AddFormDarkImg,
   AddFormImg,
   AddressDarkImg,
   AddressImg,
-  AddRestaurantDarkImg,
   CartDarkImg,
   CartImg,
   DashbiteHomeDarkImg,
@@ -31,14 +31,16 @@ import {
   ERDImg,
   LoginDarkImg,
   LoginImg,
+  MyProfileDarkImg,
+  MyProfileImg,
+  MyReviewsDarkImg,
+  MyReviewsImg,
   OrderHistoryDarkImg,
   OrderHistoryImg,
   OverviewDarkImg,
   OverviewImg,
   PhotosDarkImg,
   PhotosImg,
-  ProfileHomeDarkImg,
-  ProfileHomeImg,
   RestaurantDarkImg,
   RestaurantImg,
   RestaurantsDarkImg,
@@ -48,8 +50,8 @@ import {
   SignupDarkImg,
   SignupImg,
   StripeImg,
+  UpdateFormDarkImg,
   UpdateFormImg,
-  UpdateRestaurantDarkImg,
 } from "@/img"
 import { useTheme } from "@/providers"
 import { PageHeader } from "@/sections"
@@ -356,7 +358,7 @@ const DashbiteProjectPage = () => {
             </div>
             <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image
-                src={theme === dark ? ProfileHomeDarkImg : ProfileHomeImg}
+                src={theme === dark ? MyProfileDarkImg : MyProfileImg}
                 alt="Profile Page of Logged In User"
                 className="w-full"
               />
@@ -376,7 +378,7 @@ const DashbiteProjectPage = () => {
             </div>
             <div className="relative flex w-full items-center justify-center lg:w-1/3">
               <Image
-                src={theme === dark ? ReviewsDarkImg : ReviewsImg}
+                src={theme === dark ? MyReviewsDarkImg : MyReviewsImg}
                 alt="Reviews Page of Logged In User"
                 className="w-full"
               />
@@ -649,7 +651,7 @@ const DashbiteProjectPage = () => {
             </div>
             <div className="relative flex w-full items-center justify-center lg:w-1/2">
               <Image
-                src={theme === dark ? AddRestaurantDarkImg : AddFormImg}
+                src={theme === dark ? AddFormDarkImg : AddFormImg}
                 alt="Add Restaurant Form Image"
                 className="w-full"
               />
@@ -659,7 +661,7 @@ const DashbiteProjectPage = () => {
             </div>
             <div className="relative flex w-full items-center justify-center lg:w-1/2">
               <Image
-                src={theme === dark ? UpdateRestaurantDarkImg : UpdateFormImg}
+                src={theme === dark ? UpdateFormDarkImg : UpdateFormImg}
                 alt="Form to update details of a restaurant Image"
                 className="w-full"
               />

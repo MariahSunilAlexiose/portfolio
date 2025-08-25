@@ -2,13 +2,13 @@ import React from "react"
 
 import Image from "next/image"
 
-import { BannerXlImg } from "@/img"
+import { BannerImg } from "@/img"
 
 const Banner = () => {
   return (
     <div className="-mx-14 md:-mx-22 lg:-mx-46">
       <div className="relative h-[53px] md:h-[63px] lg:h-[147px] xl:h-[147px]">
-        <Image src={BannerXlImg} alt="Banner Image" className="object-fill" />
+        <Image src={BannerImg} alt="Banner Image" className="object-fill" />
       </div>
     </div>
   )
