@@ -1,16 +1,29 @@
 "use client"
 
+import { useEffect, useState } from "react"
+
 import Image from "next/image"
 
 import { EnvelopeIcon } from "@/icons"
 import { useResponsiveSize } from "@/utils"
 
 import Button from "./Button"
+import Skeleton from "./Skeleton"
 
 const IconInputBox = () => {
   const size = useResponsiveSize()
+  const [loading, setLoading] = useState(true)
 
-  return (
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+
+    return () => clearTimeout(timer)
+  }, [])
+  return loading ? (
+    <Skeleton className="w-full lg:h-10 h-8" />
+  ) : (
     <div className="border-muted-foreground flex items-center justify-between rounded-full border px-4 py-1 md:py-2 lg:py-4 xl:py-3">
       <div className="flex items-center gap-2 md:gap-3">
         <Button className="bg-accent flex items-center !rounded-full p-2">

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react"
 
 import Image from "next/image"
 
-import { Button } from "@/components"
+import { Button, Skeleton } from "@/components"
 import { categoryLabels } from "@/constants"
 import { dark } from "@/context"
 import { useTheme } from "@/providers"
@@ -14,6 +14,7 @@ import { LogoType } from "@/types"
 const Tools = () => {
   const { theme } = useTheme()
   const [logos, setLogos] = useState<LogoType[]>([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchOptions = async () => {
@@ -21,6 +22,12 @@ const Tools = () => {
       setLogos(newIcon)
     }
     fetchOptions()
+
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+
+    return () => clearTimeout(timer)
   }, [])
 
   // Group logos by category
@@ -35,21 +42,31 @@ const Tools = () => {
     <div className="space-y-8">
       {Object.entries(groupedLogos).map(([category, logos]) => (
         <div key={category}>
-          <p className="mb-3 text-sm md:text-2xl">
-            {categoryLabels[category] || category}:
-          </p>
+          {loading ? (
+            <div className="pb-5">
+              <Skeleton className="h-10 w-48" />
+            </div>
+          ) : (
+            <p className="mb-3 text-sm md:text-2xl">
+              {categoryLabels[category] || category}:
+            </p>
+          )}
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-5 md:justify-start">
-            {logos.map((logo) => (
-              <Button key={logo.id} variant="outline" size="icon">
-                <Image
-                  src={`/assets/icons/${theme === dark && logo.imageWhite ? logo.imageWhite : logo.image}`}
-                  alt={logo.name}
-                  width={36}
-                  height={36}
-                  className="h-9 w-9"
-                />
-              </Button>
-            ))}
+            {logos.map((logo) =>
+              loading ? (
+                <Skeleton key={logo.id} className="h-[76px] w-[76px]" />
+              ) : (
+                <Button key={logo.id} variant="outline" size="icon">
+                  <Image
+                    src={`/assets/icons/${theme === dark && logo.imageWhite ? logo.imageWhite : logo.image}`}
+                    alt={logo.name}
+                    width={36}
+                    height={36}
+                    className="h-9 w-9"
+                  />
+                </Button>
+              )
+            )}
           </div>
         </div>
       ))}
