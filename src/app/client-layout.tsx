@@ -2,7 +2,8 @@
 
 import { usePathname } from "next/navigation"
 
-import { Footer, Navbar } from "@/components"
+import { Footer } from "@/components"
+import { Navbar } from "@/containers"
 import { getBackgroundImage } from "@/utils"
 
 export default function ClientLayout({

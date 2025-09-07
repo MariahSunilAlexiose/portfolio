@@ -8,10 +8,16 @@ import { dark } from "@/context"
 import { CopyrightIcon } from "@/icons"
 import { useTheme } from "@/providers"
 import { fetchData } from "@/scripts/useFetchData"
-import { FooterSocialMediaProps } from "@/types"
 
 import Button from "./Button"
 import Skeleton from "./Skeleton"
+
+type FooterSocialMediaProps = {
+  imageWhite: string
+  imageBlack: string
+  alt: string
+  link: string
+}
 
 const Footer = () => {
   const { theme } = useTheme()

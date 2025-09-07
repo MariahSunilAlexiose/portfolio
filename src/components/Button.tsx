@@ -1,7 +1,6 @@
 "use client"
 
 import { ButtonVariants } from "@/constants"
-import { ButtonProps } from "@/types"
 
 const Button = ({
   variant = "default",
@@ -10,7 +9,22 @@ const Button = ({
   type = "button",
   className,
   onClick,
-}: ButtonProps) => {
+}: {
+  variant?:
+    | "default"
+    | "destructive"
+    | "outline"
+    | "accent"
+    | "primary"
+    | "link"
+    | "success"
+    | "ghost"
+  size?: "default" | "xs" | "sm" | "lg" | "icon"
+  children: React.ReactNode
+  type?: "submit" | "reset" | "button"
+  className?: string
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void // eslint-disable-line no-unused-vars
+}) => {
   return (
     <button
       type={type}

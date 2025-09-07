@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 import { StaticImport } from "next/dist/shared/lib/get-img-props"
 import Image from "next/image"

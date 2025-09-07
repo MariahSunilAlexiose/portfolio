@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react"
 
 import { BREAKPOINTS } from "@/constants"
-import { BreakpointSizeType } from "@/types"
+
+type BreakpointSizeType = "xs" | "sm" | "lg" | "xl"
 
 const getSize = (width: number): BreakpointSizeType => {
   if (width >= BREAKPOINTS.xl) return "xl"

@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 import Image from "next/image"
 
@@ -9,13 +9,17 @@ import { dark } from "@/context"
 import { FigmaIcon, GithubBlackIcon, GithubWhiteIcon } from "@/icons"
 import { useTheme } from "@/providers"
 import { fetchData } from "@/scripts/useFetchData"
-import { LogoType, PageDataType } from "@/types"
+import { LogoType } from "@/types"
 
-type Props = {
-  page: string
+type PageDataType = {
+  title: string
+  labels: string
+  figma: string
+  github: string
+  tools: LogoType[]
 }
 
-const PageHeader = ({ page }: Props) => {
+const PageHeader = ({ page }: { page: string }) => {
   const { theme } = useTheme()
   const [loading, setLoading] = useState(true)
   const [data, setData] = useState<PageDataType>({

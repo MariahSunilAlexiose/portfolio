@@ -1,8 +1,9 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 import { IconInputBox, Skeleton } from "@/components"
+import { EnvelopeIcon } from "@/icons"
 
 const Contact = () => {
   const [loading, setLoading] = useState(true)
@@ -24,7 +25,13 @@ const Contact = () => {
           <span className="text-primary">Let&apos;s Talk</span>
         </span>
       )}
-      <IconInputBox />
+      <IconInputBox
+        imgSrc={EnvelopeIcon}
+        imgAlt="Envelope Icon"
+        inputType="email"
+        inputPlaceholder="Enter Email Address"
+        buttonText="Send"
+      />
     </div>
   )
 }

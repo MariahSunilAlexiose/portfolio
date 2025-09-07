@@ -4,11 +4,7 @@ import { ReactNode, useContext, useEffect, useState } from "react"
 
 import { dark, light, Theme, ThemeContext } from "@/context"
 
-type ThemeProviderProps = {
-  children: ReactNode
-}
-
-export function ThemeProvider({ children }: ThemeProviderProps) {
+export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== "undefined") {
       return localStorage.getItem("theme") === "dark" ? dark : light

@@ -1,19 +1,8 @@
 "use client"
 
-import React from "react"
-
 import Image from "next/image"
 
 import { ActiveDotIcon, DotIcon } from "@/icons"
-
-/* eslint-disable */
-type Props = {
-  totalItems: number
-  itemsPerPage: number
-  currentPage: number
-  setCurrentPage: (currentPage: number) => void
-}
-/* eslint-enable */
 
 const PaginationLink = ({
   isActive,
@@ -39,7 +28,12 @@ const Pagination = ({
   itemsPerPage,
   currentPage,
   setCurrentPage,
-}: Props) => {
+}: {
+  totalItems: number
+  itemsPerPage: number
+  currentPage: number
+  setCurrentPage: (currentPage: number) => void // eslint-disable-line no-unused-vars
+}) => {
   const totalPages = Math.ceil(totalItems / itemsPerPage)
 
   if (totalPages <= 1) return null // Hide pagination if there's only one page

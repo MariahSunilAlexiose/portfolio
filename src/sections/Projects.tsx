@@ -1,15 +1,27 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
-import { Skeleton } from "@/components"
-import { Cards } from "@/containers"
+import { Pagination, Skeleton } from "@/components"
+import { ClipPathLGSVG, ClipPathXLSVG } from "@/constants"
+import { CardContainer } from "@/containers"
 import { fetchData } from "@/scripts/useFetchData"
 import { ProjectType } from "@/types"
+import { useItemsPerPage } from "@/utils"
 
 const Projects = () => {
   const [projects, setProjects] = useState<ProjectType[]>([])
   const [loading, setLoading] = useState(true)
+
+  const [currentPage, setCurrentPage] = useState<number>(1)
+  const itemsPerPage = useItemsPerPage()
+
+  const lastItemIndex = currentPage * itemsPerPage
+  const firstItemIndex = lastItemIndex - itemsPerPage
+  const currentItems = projects.slice(
+    firstItemIndex,
+    lastItemIndex + (itemsPerPage === 2 ? 1 : 0)
+  )
 
   useEffect(() => {
     const fetchOptions = async () => {
@@ -34,7 +46,31 @@ const Projects = () => {
       ) : (
         <>
           <h2>My Projects</h2>
-          <Cards data={projects} />
+          <ClipPathXLSVG />
+          <ClipPathLGSVG />
+          <div className="flex flex-col gap-2">
+            <div className="flex justify-center overflow-hidden gap-5 min-[528px]:justify-start min-[1535px]:justify-center">
+              {currentItems.map((item: ProjectType, index: number) => {
+                const isPartial = itemsPerPage === 2 && index === 2
+                return (
+                  <CardContainer
+                    key={item.id}
+                    title={item.title}
+                    image={item.image}
+                    labels={item.labels}
+                    className={isPartial ? "w-[50%] opacity-50" : ""}
+                    page={item.page}
+                  />
+                )
+              })}
+            </div>
+            <Pagination
+              totalItems={projects.length}
+              itemsPerPage={itemsPerPage}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
+          </div>
         </>
       )}
     </div>
